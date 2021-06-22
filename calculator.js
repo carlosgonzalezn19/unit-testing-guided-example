@@ -1,16 +1,24 @@
 console.log("Hola")
 
 function sum(a, b) {
-  if (a === undefined) {
+  if (a === undefined && b === undefined) {
     return 0
-  }  
+  } else if (a === undefined) {
+    return b
+  } else if (b === undefined) {
+    return a
+  }
   return a + b;
 }
 
 function subtract(a, b) {
 
-  if (a === undefined) {
+  if (a === undefined && b === undefined) {
     return 0
+  } else if (a === undefined) {
+    return 0 - b
+  } else if (b === undefined) {
+    return a - 0
   }
   return a - b;
 }
